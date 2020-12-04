@@ -18,7 +18,7 @@ with open('in.txt') as f:
                             if match != None and len(match.groups()) != 0:
                                 match = re.search(r"(ecl):(amb|blu|brn|gry|grn|hzl|oth)", line)
                                 if match != None and len(match.groups()) != 0:
-                                    match = re.search(r"(pid):(\d{9})", line)
+                                    match = re.search(r"(pid):(\d{9})", line) # this matches 1 too many cases where pid is 10 digits.
                                     if match != None and len(match.groups()) != 0:
                                         count += 1
                                         print(str(lc) + "                           MATCH " + str(count) + ": " + str(line))
