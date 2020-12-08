@@ -5,7 +5,7 @@ def run(inlines, swapindex) :
     index = 0
     count = []
     for i in range(len(lines)):
-        count.append(0)
+        count.append(i*0)
     while (index < len(inlines) and count[index] == 0):
         command = inlines[index]
         num = re.search(r"([+-]\d+)", command).group(1)
